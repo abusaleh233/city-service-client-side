@@ -18,7 +18,7 @@ const handleSubmit = (e) => {
         amount: e.target.amount.value,
     };
        
-        fetch(`http://localhost:3000/issues/${data._id}`, {
+        fetch(`https://city-service-server-sitd.vercel.app/issues/${data._id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
@@ -51,7 +51,7 @@ const handleDlete = () => {
     }).then((result) => {
   if (result.isConfirmed) {
      
-    fetch(`http://localhost:3000/issues/${data._id}`, {
+    fetch(`https://city-service-server-sitd.vercel.app/issues/${data._id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",

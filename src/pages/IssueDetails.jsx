@@ -22,7 +22,7 @@ const IssueDetails = () => {
         };
         console.log(formData);
            
-            fetch("http://localhost:3000/contribution", {
+            fetch("https://city-service-server-sitd.vercel.app/contribution", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

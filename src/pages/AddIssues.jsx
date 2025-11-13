@@ -23,7 +23,7 @@ const AddIssues = () => {
         
         }
 
-        fetch('http://localhost:3000/issues', {
+        fetch('https://city-service-server-sitd.vercel.app/issues', {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

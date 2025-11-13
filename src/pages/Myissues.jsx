@@ -8,7 +8,7 @@ const Myissues = () => {
     const [loading,setLoading] = useState(true)
 
     useEffect(()=>{
-    fetch(`http://localhost:3000/my-issues?email=${user.email}`)
+    fetch(`https://city-service-server-sitd.vercel.app/my-issues?email=${user.email}`)
     .then(res => res.json())
     .then(data =>{
         setIssue(data);

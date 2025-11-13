@@ -8,11 +8,6 @@ import { AuthContext } from '../../conext/AuthContext';
 
 
 
-
-
-
-
-
 const Registation = () => {
     const { createUser, updateUserProfile, signInWithGoogle,setLoading,signOutUser,setUser } = useContext(AuthContext);
     const [show, setShow] = useState(false);

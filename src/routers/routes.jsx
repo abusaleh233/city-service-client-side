@@ -21,12 +21,12 @@ export const router = createBrowserRouter([
         {
             index: true,
             element: <Home></Home>,
-            loader: () => fetch('http://localhost:3000/latest-issues')
+            loader: () => fetch('https://city-service-server-sitd.vercel.app/latest-issues')
         },
         {
             path:'/allissues',
             element: <AllIssues></AllIssues>,
-            loader: () => fetch('http://localhost:3000/issues')
+            loader: () => fetch('https://city-service-server-sitd.vercel.app/issues')
         },
         {
         path: "/issue-details/:id",
@@ -35,7 +35,7 @@ export const router = createBrowserRouter([
             <IssueDetails />
           </PrivateRoute>
         ),
-        loader:({params}) => fetch(`http://localhost:3000/issues/${params.id}`)
+        loader:({params}) => fetch(`https://city-service-server-sitd.vercel.app/${params.id}`)
         },
          {
         path: "/my-issue-details/:id",
@@ -44,7 +44,7 @@ export const router = createBrowserRouter([
             <MyIssueDetails />
           </PrivateRoute>
         ),
-        loader:({params}) => fetch(`http://localhost:3000/myissues/${params.id}`)
+        loader:({params}) => fetch(`https://city-service-server-sitd.vercel.app/myissues/${params.id}`)
         },
         {
             path:'/addissues',
@@ -69,7 +69,7 @@ export const router = createBrowserRouter([
                 <MyContribution></MyContribution>
                 </PrivateRoute>
             ),
-            loader: () => fetch('http://localhost:3000/contribution')
+            loader: () => fetch('https://city-service-server-sitd.vercel.app/contribution')
         },
         {
         path: "/auth/login",
