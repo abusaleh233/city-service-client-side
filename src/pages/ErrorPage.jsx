@@ -7,11 +7,8 @@ import Footer from '../components/Footer';
 const ErrorPage = () => {
  
   const goToHomepage = () => {
-   
-    
     alert('Navigation is working! (Check console)');
   };
-  
   
   const alert = (message) => {
     const modal = document.getElementById('custom-modal');
@@ -80,9 +77,6 @@ const ErrorPage = () => {
     <Footer></Footer>
 
     </div>
-
-    
-
 
   );
 };
