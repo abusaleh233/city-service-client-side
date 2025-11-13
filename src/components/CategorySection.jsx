@@ -28,8 +28,7 @@ const CategorySection = () => {
                             transform transition duration-300 ease-in-out 
                             hover:scale-[1.02] hover:shadow-xl 
                             cursor-pointer border border-gray-200
-                        `}
-                    >
+                        `}>
                         
                         <div className={`p-3 rounded-full mb-3 ${category.iconColor} bg-white shadow-md`}>
                             <IconComponent size={30} strokeWidth={2} />
@@ -39,8 +38,6 @@ const CategorySection = () => {
                         <h3 className="text-xl font-semibold text-gray-800 mb-2 text-center">
                             {category.title}
                         </h3>
-                        
-                        
                         
                         <p className="text-sm text-gray-600 text-center">
                             {category.description}
