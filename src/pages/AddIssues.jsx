@@ -47,9 +47,10 @@ const AddIssues = () => {
 
     return (
             <div className="card border border-gray-200 bg-base-100 w-full max-w-md mx-auto shadow-2xl rounded-2xl">
+                <title>Add issue-page</title>
             <div className="card-body p-3 relative">
                 <h2 className="text-2xl font-bold text-center mb-6">Add New Issue</h2>
-                
+
             {/* ful form */}
             <form onSubmit={handleSubmit} className="space-y-4">
                 

@@ -25,6 +25,7 @@ if(loading){
        
    
             <div>
+                <title>My issue-page</title>
               <div className="text-2xl text-center font-bold"> MY issue</div>
               <div className="grid grid-cols-3 lg:grid-cols-4 gap-3 py-10">
                  {issue.map(issue => <MyIssuesCard key={issue._id} issue={issue}/>)}

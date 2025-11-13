@@ -63,6 +63,7 @@ const Registation = () => {
 
     return (
             <div className="card bg-base-100 w-full mx-auto max-w-sm shrink-0 shadow-2xl">
+              <title>Registation-page</title>
                 <div className="card-body">
                     <h1 className="text-3xl font-bold text-center">Register</h1>
                 <form onSubmit={handleRegister}>

@@ -22,6 +22,7 @@ const AllIssues = () => {
 
     return (
         <div>
+            <title>All issues-page</title>
             {/* typeCursor */}
              <div className="text-center text-4xl font-extrabold mt-10 text-green-600">
                 {text}

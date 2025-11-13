@@ -13,6 +13,7 @@ const MyContribution = () => {
 
     return (
         <div className="p-4 md:p-8">
+            <title>My-Contribution-page</title>
             <h2 className="text-3xl text-center font-bold mb-8 text-primary">💰 My Contributions</h2>
             
             {contributions && contributions.length > 0 ? (
