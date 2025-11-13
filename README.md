@@ -1,16 +1,19 @@
-# React + Vite
+Website name : City Service
+Live site URL :
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Thi website feature:
 
-Currently, two official plugins are available:
+user
+.....
+A primary focus of this initiative is ease of use. The intuitive Navigation Menu ensures that users can quickly locate sections for reporting issues, checking status updates, or accessing general information without hassle. Furthermore, the inclusion of a dedicated User Account/Profile system allows citizens to manage their submitted reports, track the progress of their complaints, and receive personalized updates directly
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## React Compiler
+The platform specifically targets several critical civic issues that impact the quality of life. Citizens can easily submit detailed reports under the following categories:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+(1)Garbage Issue: This includes everything from uncollected household waste and overflowing public bins to illegal dumping sites, allowing authorities to pinpoint problem areas quickly.
 
-## Expanding the ESLint configuration
+(2)Road Damage: Reports filed here cover all forms of degradation, such as potholes, cracked pavement, sinkholes, and damaged road markings, leading to faster repairs and improved road safety.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+(3)Illegal Construction: This feature enables residents to flag unauthorized building activities or structural violations, helping maintain zoning compliance and public safety standards.
+
+(4)Broken Public Property: This category covers damage to public assets like streetlights, park benches, playground equipment, traffic signs, and damaged pedestrian railings, ensuring that community infrastructure is preserved.
