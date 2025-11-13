@@ -1,0 +1,108 @@
+import React, { useContext, useState } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router';
+import { FcGoogle } from "react-icons/fc"
+import { GoEye } from "react-icons/go";
+import { IoEyeOffOutline } from "react-icons/io5";
+import { toast } from 'react-toastify';
+import { AuthContext } from '../../conext/AuthContext';
+
+
+
+
+const Login = () => {
+    const { signInUser, signInWithGoogle, setUser,setLoading } = useContext(AuthContext);
+    const [show, setShow] = useState(false);
+    const location = useLocation();
+    const navigate = useNavigate();
+
+
+    // LogIn
+    const handleLogIn =  (e) => {
+        e.preventDefault();
+       const email = e.target.email.value;
+       const password = e.target.password.value;
+       console.log({email,password});
+
+       signInUser(email, password)
+        .then((res) => {
+            console.log(res);
+            setUser(res.user);
+            setLoading(false);
+            toast.success("Login Successfull")
+            navigate(location?.state || "/");
+        })
+        .catch((e) => {
+            toast.error(e.message)    
+            });
+    }
+
+
+    // googleLogin
+      const handleGoogleSignIn = () => {
+    signInWithGoogle()
+      .then((result) => {
+        console.log(result.user);
+        setLoading(false)
+        navigate(location?.state || "/");
+      })
+      .catch((e) => {
+        toast.error(e.message);
+      });
+  };
+
+   
+
+
+    return (
+    <div className="card bg-base-100  w-full mx-auto max-w-sm shrink-0 shadow-2xl border border-gray-200">
+      <div className="card-body">
+        <h1 className="text-3xl font-bold text-center">Login</h1>
+             <form onSubmit={handleLogIn}>
+                <fieldset className="fieldset">
+                <label className="label">Email</label>
+                <input
+                type="email"
+                name="email"
+                className="input rounded-full focus:border-0 focus:outline-gray-200"
+                placeholder="Email"
+                />
+                {/* password */}
+                <label className="label">Password</label>
+                <div className='relative'>
+                    <input
+                    type={show ? "text" : "password"}
+                    name="password"
+                    className="input rounded-full focus:border-0 focus:outline-gray-200"
+                    placeholder="Password"/>
+                    <span onClick={()=>setShow(!show)} className='absolute right-[10px] top-[15px] cursor-pointer z-50'>
+                    {show ? <GoEye /> : <IoEyeOffOutline /> }
+                    </span>
+                    </div>
+
+                    <div>
+                    <a className="link link-hover">Forgot password?</a>
+                    </div>
+                        <button className="btn text-white mt-4 rounded-full bg-linear-to-r from-cyan-500 to-blue-600">
+                        Login
+                        </button>
+                    </fieldset>
+            </form>
+       
+        <button onClick={handleGoogleSignIn} className="btn bg-white rounded-full text-black border-[#e5e5e5]">
+        <FcGoogle />  Login with Google
+        </button>
+
+        <p className="text-center">
+          New to our website? Please  <Link
+            className="text-blue-500 hover:text-blue-800"
+            to="/auth/register"
+          >
+             Register
+          </Link>
+        </p>
+      </div>
+    </div>
+    );
+};
+
+export default Login;
