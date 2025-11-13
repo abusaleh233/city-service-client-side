@@ -10,8 +10,9 @@ const AllIssues = () => {
      const IllegalConstructionIssues = allIssues.filter(issue => issue.category === 'Illegal Construction');
      const BrokenPublicPropertyIssues = allIssues.filter(issue => issue.category === 'Broken Public Property');
      const RoadDamageIssues = allIssues.filter(issue => issue.category === 'Road Damage');
+    
+    // TyperWrit section
      const { text } = useTypewriter({
-        // যে শব্দটি টাইপ হবে
         words: ['Latest issues', ''],
         loop: {}, 
         typeSpeed: 80, 
@@ -21,7 +22,7 @@ const AllIssues = () => {
 
     return (
         <div>
-
+            {/* typeCursor */}
              <div className="text-center text-4xl font-extrabold mt-10 text-green-600">
                 {text}
                 <Cursor cursorStyle='All Issues' cursorColor='#4CAF50' />
@@ -53,13 +54,7 @@ const AllIssues = () => {
             </div>
 
 
-             {/* <div className="text-2xl text-center font-bold"> All Issues</div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 py-10">
-
-                    {data.map(issue => <AllissuesCard key={issue._id} issue={issue}/>)}
-
-                </div> */}
+            
         </div>
     );
 };
