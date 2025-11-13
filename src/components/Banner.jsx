@@ -53,26 +53,22 @@ const Banner = () => {
              
                 <div 
                     className="flex transition-transform duration-700 ease-in-out"
-                    style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-                >
+                    style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
                     {images.map((image, index) => (
                         <div key={index} className="min-w-full">
                             <img
                                 src={image.src}
                                 alt={image.alt}
-                                className="w-full h-96 object-cover" 
-                            />
-                            
-                        </div>
-                    ))}
+                                className="w-full h-96 object-cover" />
+                        </div>))}
                 </div>
 
                 <button 
                     onClick={goToPrev} 
-                    className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-75 transition"
-                >
+                    className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-75 transition">
                     &lt;
                 </button>
+
                 <button 
                     onClick={goToNext} 
                     className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-75 transition"
@@ -80,7 +76,6 @@ const Banner = () => {
                     &gt;
                 </button>
 
-               
                 <div className="absolute bottom-4 left-0 right-0 flex justify-center space-x-2">
                     {images.map((_, index) => (
                         <button
