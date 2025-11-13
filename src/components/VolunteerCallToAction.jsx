@@ -1,18 +1,18 @@
 import React from 'react';
 
 const VolunteerCallToAction = () => {
-    // এখানে আপনি হ্যান্ডলার ফাংশন যোগ করতে পারেন, যেমন:
+    
     const handleJoinClick = () => {
-        // এই ফাংশনটি ইউজারকে রেজিস্ট্রেশন পেজ বা কন্টাক্ট ফর্মে রিডাইরেক্ট করবে
+       
         alert('Thank you for your interest! Redirecting to the Volunteer Sign-up Page...');
-        // window.location.href = '/volunteer-signup'; 
+       
     };
 
     return (
         <section className="bg-white py-16 md:py-24">
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 
-                {/* হেডিং এবং বর্ণনা */}
+             
                 <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
                     🤝 Join Our Clean Drive!
                 </h2>
@@ -37,7 +37,7 @@ const VolunteerCallToAction = () => {
                     Become a Volunteer Today!
                 </button>
 
-                {/* অতিরিক্ত তথ্য */}
+               
                 <p className="mt-8 text-sm text-gray-500">
                     Any questions? Check out our FAQ section or contact us directly.
                 </p>
