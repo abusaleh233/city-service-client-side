@@ -39,7 +39,6 @@ const CommunityStats = () => {
                         key={stat.id}
                         className={`p-6 rounded-xl shadow-lg transition duration-300 ease-in-out hover:shadow-2xl ${stat.color} flex items-center space-x-4`}
                     >
-                        
                         <div className="text-4xl">
                             {stat.icon}
                         </div>
@@ -50,7 +49,6 @@ const CommunityStats = () => {
                             </p>
                             <p className="text-4xl font-bold">
                                 {stat.value.toLocaleString()} 
-                              
                             </p>
                         </div>
                     </div>
