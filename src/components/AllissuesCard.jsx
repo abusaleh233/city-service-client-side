@@ -7,6 +7,7 @@ const AllissuesCard = ({issue}) => {
 
     return (
           <div className="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+            {/* card image */}
             <figure className="h-48 overflow-hidden">
                 <img
                 src={image}
@@ -14,6 +15,7 @@ const AllissuesCard = ({issue}) => {
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
                 />
             </figure>
+            {/* card title */}
             <div className="">
                 <h2 className="card-title text-cyan-600">{title}</h2>
                 <div className="font-bold text-sm ">{category}</div>
